@@ -1,6 +1,7 @@
 autoload colors; colors
 
-export PS1="%{$fg[blue]%}%3~ %{$fg[cyan]%}→ %{$reset_color%}"
+setopt PROMPT_SUBST
+export PS1='%{$fg[blue]%}%3~ %{$fg[cyan]%}→ %{$reset_color%}'
 export CLICOLOR=1
 
 source /usr/local/bin/virtualenvwrapper.sh
