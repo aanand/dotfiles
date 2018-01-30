@@ -13,6 +13,7 @@ export RPROMPT='%{$terminfo[bold]$fg[yellow]%}$(git-prompt "%s")%{$reset_color%}
 export CLICOLOR=1
 
 # completion
+fpath=(~/.dotfiles/zsh/completion $fpath)
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # matches case insensitive for lowercase
