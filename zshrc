@@ -22,5 +22,16 @@ zstyle ':completion:*' insert-tab pending           # pasting with tabs doesn't 
 alias l="ls -lAh"
 alias fig="docker-compose"
 
+# history
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+
+# print elapsed time when a command takes more than 10 seconds
+REPORTTIME=10
+
 # virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
