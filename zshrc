@@ -12,15 +12,21 @@ export RPROMPT='%{$terminfo[bold]$fg[yellow]%}$(git-prompt "%s")%{$reset_color%}
 # ls colors
 export CLICOLOR=1
 
+# word characters
+WORDCHARS='_'
+
 # completion
 fpath=(~/.dotfiles/zsh/completion $fpath)
 autoload -U compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # matches case insensitive for lowercase
 zstyle ':completion:*' insert-tab pending           # pasting with tabs doesn't perform completion
+zstyle ':completion:*' list-colors ''
 
 # aliases
 alias l="ls -lAh"
+
+# party like it's 2014
 alias fig="docker-compose"
 
 # history
